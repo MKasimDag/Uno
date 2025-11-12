@@ -1,0 +1,22 @@
+Kasim plays images\card_images\028_red_5.jpg
+bot1 plays images\card_images\033_red_7.jpg
+bot2 plays images\card_images\031_red_6.jpg
+bot3 plays images\card_images\022_red_2.jpg
+bot1 plays images\card_images\003_yellow_2.jpg
+bot2 plays images\card_images\010_yellow_5.jpg
+bot3 plays images\card_images\048_blue_5.jpg
+Kasim plays images\card_images\094_blue_plus2.jpg
+Kasim plays +2 card
+bot1 draws a card from deck
+bot1 draws a card from deck
+bot1 draws 2 cards as a penalty
+bot2 plays images\card_images\040_blue_1.jpg
+bot3 plays images\card_images\057_blue_0.jpg
+Kasim plays images\card_images\096_blue_skip.jpg
+Kasim plays skip card
+bot1 plays images\card_images\079_im.jpg
+bot1 plays images\card_images\079_im.jpg
+bot3 plays images\card_images\106_im.jpg
+bot3 plays images\card_images\106_im.jpg
+bot3 plays wild +4 card
+bot3 plays wild +4 card

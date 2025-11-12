@@ -1,6 +1,13 @@
 *****UserStatistic*****
-Num of games:0
-Num of wins:0
+Num of games:2
+Num of wins:2
 Num of loses:0
-Total score:0
+Total score:180
 *****Games*****
+game_5
+game_6
+game_7
+game_8
+game_9
+game_10
+game_11

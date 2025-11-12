@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -94,7 +95,7 @@ public class GameArea extends JFrame implements ActionListener {
         this.decks = decks;
         this.username = username;
         this.totalBotNum = decks.size() - 2;
-        this.totalBotNum2 = totalBotNum - 1;
+        this.totalBotNum2 = totalBotNum - 1; // number of bots (bot IDs are 1..N)
         this.botId = ascendingOrder ? 1 : totalBotNum2;
         this.gameLog = gameLog;
 
@@ -445,17 +446,19 @@ public class GameArea extends JFrame implements ActionListener {
                             if (botsCard instanceof ActionCard) {
                                 if (((ActionCard) botsCard).getType().equals("plus2")) {
                                     drawNumForUser = 2;
+                                    ((ActionCard) botsCard).setDoesAffectedGame(true);
                                     logAction(currentBot + " plays +2 card");
                                 } else if (((ActionCard) botsCard).getType().equals("skip")) {
-                                    botId += step; // Skip next bot
+                                    botId += step; // Skip next bot (one extra step total this turn)
+                                    ((ActionCard) botsCard).setDoesAffectedGame(true);
                                     logAction(currentBot + " plays skip card");
                                     if (botId < 1 || botId > totalBotNum2) {
                                         myTurn = true; // Ensure we don't skip into invalid botId range
                                         break;
                                     }
-                                    botId += step; // Move to the next bot
                                 } else if (((ActionCard) botsCard).getType().equals("reverse")) {
                                     changeDirection();
+                                    ((ActionCard) botsCard).setDoesAffectedGame(true);
                                     logAction(currentBot + " plays reverse card");
                                     step = -step; // Change direction
                                 }
@@ -463,6 +466,7 @@ public class GameArea extends JFrame implements ActionListener {
                             if (botsCard instanceof WildCard) {
                                 if (((WildCard) botsCard).getType().equals("change_color_plus4")) {
                                     drawNumForUser = 4;
+                                    ((WildCard) botsCard).setDoesAffectedGame(true);
                                     logAction(currentBot + " plays wild +4 card");
                                 }
                             }
@@ -541,7 +545,7 @@ public class GameArea extends JFrame implements ActionListener {
         ascendingOrder = !ascendingOrder;
         gameWay = !gameWay;
 
-        String arrowPath = gameWay ? "images/design_images/cw.png" : "images/design_images/ccw.png";
+        String arrowPath = gameWay ? "images/design_images/ccw.png" : "images/design_images/cw.png";
         BufferedImage img2 = loadImage(arrowPath);
         BufferedImage resizedImg2 = resizeImage(img2, 84, 129);
         gameway_arrow.setIcon(new ImageIcon(resizedImg2));
@@ -551,9 +555,11 @@ public class GameArea extends JFrame implements ActionListener {
         String winner = null;
 
         for (String key : decks.keySet()) {
-            if (decks.get(key).size() == 0) {
-                winner = key;
-                break;
+            if (!(key.equals("mid") || key.equals("throwed"))) {
+                if (decks.get(key).size() == 0) {
+                    winner = key;
+                    break;
+                }
             }
         }
 
@@ -619,10 +625,12 @@ public class GameArea extends JFrame implements ActionListener {
                                     if (selectedCard instanceof ActionCard) {
                                         if (((ActionCard) selectedCard).getType().equals("plus2")) {
                                             drawNumForUser = 2;
+                                            ((ActionCard) selectedCard).setDoesAffectedGame(true);
                                             logAction(username + " plays +2 card");
                                         } else if (((ActionCard) selectedCard).getType().equals("skip")) {
                                             int step = ascendingOrder ? 1 : -1;
                                             botId += step;
+                                            ((ActionCard) selectedCard).setDoesAffectedGame(true);
                                             logAction(username + " plays skip card");
                                             if (botId < 1 || botId > totalBotNum2) {
                                                 myTurn = true;
@@ -631,6 +639,7 @@ public class GameArea extends JFrame implements ActionListener {
                                             return 1;
                                         } else if (((ActionCard) selectedCard).getType().equals("reverse")) {
                                             changeDirection();
+                                            ((ActionCard) selectedCard).setDoesAffectedGame(true);
                                             logAction(username + " plays reverse card");
                                         }
                                     }
@@ -820,6 +829,7 @@ public class GameArea extends JFrame implements ActionListener {
 
     private void botDrawCard(int n, String bot) {
         for (int i = 0; i < n; i++) {
+            ensureDrawPile();
             decks.get(bot).add(decks.get("mid").getFirst());
             decks.get("mid").removeFirst();
             logAction(bot + " draws a card from deck");
@@ -853,12 +863,14 @@ public class GameArea extends JFrame implements ActionListener {
         if (e.getSource() == drawCardButton) {
             if (drawNumForUser > 0) {
                 for (int i = 0; i < drawNumForUser; i++) {
+                    ensureDrawPile();
                     decks.get(username).add(decks.get("mid").removeFirst());
                     drawACard(decks.get(username).get(decks.get(username).size() - 1));
                     logAction(username + " draws a card as penalty");
                 }
                 drawNumForUser = 0;
             } else {
+                ensureDrawPile();
                 decks.get(username).add(decks.get("mid").removeFirst());
                 drawACard(decks.get(username).get(decks.get(username).size() - 1));
                 logAction(username + " draws a card from deck");
@@ -885,6 +897,18 @@ public class GameArea extends JFrame implements ActionListener {
         	Games.saveGame(gameLog, decks);
         	dispose();
         	//new UserPageOverlay(username, password);
+        }
+    }
+
+    private void ensureDrawPile() {
+        LinkedList<Cards> drawPile = decks.get("mid");
+        LinkedList<Cards> discard = decks.get("throwed");
+        if (drawPile.isEmpty() && discard.size() > 1) {
+            Cards top = discard.removeLast();
+            Collections.shuffle(discard);
+            drawPile.addAll(discard);
+            discard.clear();
+            discard.add(top);
         }
     }
 }

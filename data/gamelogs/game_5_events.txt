@@ -1,0 +1,10 @@
+Kasim plays images\card_images\033_red_7.jpg
+bot1 plays images\card_images\106_im.jpg
+bot1 plays wild +4 card
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws 4 cards as a penalty
+bot3 plays images\card_images\094_blue_plus2.jpg
+bot3 plays +2 card

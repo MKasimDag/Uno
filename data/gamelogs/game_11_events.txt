@@ -1,0 +1,60 @@
+Kasim plays images\card_images\055_blue_9.jpg
+bot1 plays images\card_images\041_blue_2.jpg
+bot2 plays images\card_images\077_im.jpg
+bot3 plays images\card_images\104_green_reverse.jpg
+bot3 plays reverse card
+bot2 plays images\card_images\061_green_2.jpg
+bot1 plays images\card_images\071_green_7.jpg
+Kasim plays images\card_images\073_green_8.jpg
+bot3 plays images\card_images\107_im.jpg
+bot3 plays wild +4 card
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws 4 cards as a penalty
+bot1 plays images\card_images\012_yellow_6.jpg
+Kasim plays images\card_images\105_im.jpg
+Kasim plays wild +4 card
+bot3 draws a card from deck
+bot3 draws a card from deck
+bot3 draws a card from deck
+bot3 draws a card from deck
+bot3 draws 4 cards as a penalty
+bot2 plays images\card_images\097_blue_reverse.jpg
+bot2 plays reverse card
+bot3 plays images\card_images\078_im.jpg
+Kasim plays images\card_images\065_green_4.jpg
+bot1 plays images\card_images\103_green_reverse.jpg
+bot1 plays reverse card
+Kasim plays images\card_images\076_green_0.jpg
+bot3 plays images\card_images\069_green_6.jpg
+bot2 plays images\card_images\011_yellow_6.jpg
+Kasim plays images\card_images\018_yellow_9.jpg
+bot3 plays images\card_images\084_yellow_skip.jpg
+bot3 plays skip card
+Kasim draws a card from deck
+Kasim plays images\card_images\019_yellow_0.jpg
+bot3 plays images\card_images\005_yellow_3.jpg
+bot2 plays images\card_images\085_yellow_reverse.jpg
+bot2 plays reverse card
+bot3 plays images\card_images\010_yellow_5.jpg
+Kasim draws a card from deck
+bot1 plays images\card_images\047_blue_5.jpg
+Kasim plays images\card_images\098_blue_reverse.jpg
+Kasim plays reverse card
+bot1 plays images\card_images\043_blue_3.jpg
+Kasim draws a card from deck
+bot3 plays images\card_images\025_red_3.jpg
+bot2 plays images\card_images\090_red_skip.jpg
+bot2 plays skip card
+Kasim plays images\card_images\088_red_plus2.jpg
+Kasim plays +2 card
+bot3 draws a card from deck
+bot3 draws a card from deck
+bot3 draws 2 cards as a penalty
+bot2 plays images\card_images\020_red_1.jpg
+Kasim plays images\card_images\023_red_2.jpg
+Winner: Kasim
+bot3 plays images\card_images\024_red_3.jpg
+Winner: Kasim

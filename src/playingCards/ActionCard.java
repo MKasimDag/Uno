@@ -6,7 +6,7 @@ public class ActionCard extends Cards {
 
     public ActionCard(String color, String path, int id, String type) {
         super(color, path, id);
-        this.type = type.split(".jpg")[0];
+        this.type = (type != null && type.endsWith(".jpg")) ? type.substring(0, type.length() - 4) : type;
         this.setScoreVal(20);
         this.doesAffectedGame = false;
     }

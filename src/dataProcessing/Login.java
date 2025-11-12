@@ -128,11 +128,12 @@ public class Login {
 					while (scanner.hasNextLine()) {
 						String aLine = scanner.nextLine();
 
-						if (aLine.substring(0, 12).equals("Total score:")) {
-							//System.out.println(file.getName().split(".txt")[0] + ":" + aLine.split(":")[1]);
-							data.put(file.getName().split(".txt")[0] ,Integer.valueOf(aLine.split(":")[1]));
-							break;
-						}
+                        if (aLine.substring(0, 12).equals("Total score:")) {
+                            String baseName = file.getName().replaceFirst("\\.txt$", "");
+                            //System.out.println(baseName + ":" + aLine.split(":")[1]);
+                            data.put(baseName ,Integer.valueOf(aLine.split(":")[1]));
+                            break;
+                        }
 						
 					}
 				}

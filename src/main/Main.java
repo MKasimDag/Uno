@@ -1,5 +1,9 @@
 package main;
 
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
+
 import gui.LoginOverlay;
 
 /************** Pledge of Honor ******************************************
@@ -14,8 +18,24 @@ SIGNATURE: Muhammed Kasım DAĞ, 83679
 
 public class Main {
 
-	public static void main(String[] args) {
-		new LoginOverlay();
-	}
+    public static void main(String[] args) {
+        // Create UI on the EDT and apply a modern Look & Feel
+        SwingUtilities.invokeLater(() -> {
+            try {
+                boolean nimbusSet = false;
+                for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+                    if ("Nimbus".equals(info.getName())) {
+                        UIManager.setLookAndFeel(info.getClassName());
+                        nimbusSet = true;
+                        break;
+                    }
+                }
+                if (!nimbusSet) {
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+                }
+            } catch (Exception ignore) { }
 
+            new LoginOverlay();
+        });
+    }
 }

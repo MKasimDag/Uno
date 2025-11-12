@@ -36,16 +36,17 @@ public class Games {
 		return id;
 	}
 	
-	private static String listToString(LinkedList<Cards> list) {
-		String result = "";
-		
-		for (Cards aCard : list) {
-			result = result.concat(String.valueOf(aCard.getPath().substring(19))).concat(",");
-		}
-		if (result.length() != 0) result = result.substring(0, result.length() - 1);
-		//System.out.println(result);
-		return result;
-	}
+    private static String listToString(LinkedList<Cards> list) {
+        String result = "";
+        
+        for (Cards aCard : list) {
+            String fileName = new File(aCard.getPath()).getName();
+            result = result.concat(fileName).concat(",");
+        }
+        if (result.length() != 0) result = result.substring(0, result.length() - 1);
+        //System.out.println(result);
+        return result;
+    }
 	
 	private static void updateGameNumber(String path) {
 
@@ -201,12 +202,12 @@ public class Games {
 
 	}
 
-	private static String combinePaths(ArrayList<LinkedList<Cards>> list, int index) {
-		LinkedList<Cards> cardsList = list.get(index);
+    private static String combinePaths(ArrayList<LinkedList<Cards>> list, int index) {
+        LinkedList<Cards> cardsList = list.get(index);
         StringBuilder combinedPathsBuilder = new StringBuilder();
         
         for (int i = 0; i < cardsList.size(); i++) {
-            combinedPathsBuilder.append(cardsList.get(i).getPath().substring(19));
+            combinedPathsBuilder.append(new File(cardsList.get(i).getPath()).getName());
 
             if (i < cardsList.size() - 1) {
                 combinedPathsBuilder.append(",");

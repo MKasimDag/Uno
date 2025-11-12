@@ -12,9 +12,11 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JSeparator;
 import javax.swing.JTextField;
+import javax.swing.BorderFactory;
 
 import dataProcessing.Login;
 import java.awt.Color;
+import java.awt.Insets;
 
 public class LoginOverlay extends JFrame implements ActionListener{
 
@@ -30,12 +32,14 @@ public class LoginOverlay extends JFrame implements ActionListener{
 		return currentUser;
 	}
 
-	public LoginOverlay() {
+    public LoginOverlay() {
 
-		this.setResizable(false);
-		this.setBounds(100, 100, 1000, 600);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.getContentPane().setLayout(null);
+        this.setTitle("UNO - Login");
+        this.setResizable(false);
+        this.setBounds(100, 100, 1000, 600);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.getContentPane().setLayout(null);
+        this.setIconImage(new ImageIcon("images/design_images/table.png").getImage());
 		
 		
 		JPanel panel = new JPanel();
@@ -56,52 +60,69 @@ public class LoginOverlay extends JFrame implements ActionListener{
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(610, 0, 390, 600);
 		//panel.setVisible(true);
+		panel_1.setBackground(Color.WHITE);
+		panel_1.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 		this.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
 		loginButton = new JButton("Log In");
 		loginButton.setBounds(132, 327, 129, 46);
+		loginButton.setBackground(new Color(0x1976D2));
+		loginButton.setForeground(Color.WHITE);
+		loginButton.setFocusPainted(false);
+		loginButton.setMargin(new Insets(6,12,6,12));
 		loginButton.addActionListener(this);
 		panel_1.add(loginButton);
 		
 		JLabel username_txt = new JLabel("Username");
 		username_txt.setBounds(47, 103, 294, 33);
+		username_txt.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		panel_1.add(username_txt);
 		
 		username_input = new JTextField();
 		username_input.setBounds(47, 146, 294, 40);
+		username_input.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		panel_1.add(username_input);
 		username_input.setColumns(10);
 		
 		JLabel password_txt = new JLabel("Password");
 		password_txt.setBounds(47, 203, 294, 33);
+		password_txt.setFont(new Font("Segoe UI", Font.PLAIN, 13));
 		panel_1.add(password_txt);
 		
 		password_input = new JPasswordField();
 		password_input.setBounds(47, 246, 294, 40);
+		password_input.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 		panel_1.add(password_input);
 		
 		signUpButton = new JButton("Sign Up");
 		signUpButton.setBounds(132, 472, 129, 46);
+		signUpButton.setBackground(new Color(0x2E7D32));
+		signUpButton.setForeground(Color.WHITE);
+		signUpButton.setFocusPainted(false);
+		signUpButton.setMargin(new Insets(6,12,6,12));
 		signUpButton.addActionListener(this);
 		panel_1.add(signUpButton);
 		
-		JLabel constantText1 = new JLabel("Don't You Have An Accound. Click and Sign Up!");
+		JLabel constantText1 = new JLabel("Don't have an account? Click Sign Up!");
 		constantText1.setBounds(47, 422, 294, 40);
+		constantText1.setFont(new Font("Segoe UI", Font.PLAIN, 12));
 		panel_1.add(constantText1);
 		
 		JLabel lblNewLabel_1_2 = new JLabel("Log In / Sign Up");
-		lblNewLabel_1_2.setFont(new Font("Tahoma", Font.BOLD, 16));
+		lblNewLabel_1_2.setFont(new Font("Segoe UI", Font.BOLD, 18));
 		lblNewLabel_1_2.setBounds(111, 38, 140, 55);
 		panel_1.add(lblNewLabel_1_2);
 		
 		dispMessageTxt = new JLabel("");
-		dispMessageTxt.setForeground(Color.RED);
-		dispMessageTxt.setFont(new Font("Tahoma", Font.BOLD, 10));
+		dispMessageTxt.setForeground(new Color(0xD32F2F));
+		dispMessageTxt.setFont(new Font("Segoe UI", Font.BOLD, 12));
 		dispMessageTxt.setBounds(47, 383, 294, 40);
 		panel_1.add(dispMessageTxt);
 		
 		
+		getRootPane().setDefaultButton(loginButton);
+		this.setLocationRelativeTo(null);
 		this.setVisible(true);
 	}
 
