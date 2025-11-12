@@ -1,0 +1,6 @@
+*****UserStatistic*****
+Num of games:0
+Num of wins:0
+Num of loses:0
+Total score:0
+*****Games*****

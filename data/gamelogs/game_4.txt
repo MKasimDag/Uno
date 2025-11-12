@@ -1,0 +1,12 @@
+*****Begining Of Game*****
+Session Name:7player
+Num of players:7
+Doğukan:058_green_1.jpg,064_green_4.jpg,061_green_2.jpg,086_yellow_reverse.jpg,046_blue_4.jpg,087_red_plus2.jpg
+bot1:035_red_8.jpg,021_red_1.jpg,063_green_3.jpg,045_blue_4.jpg,088_red_plus2.jpg,106_im.jpg
+bot2:006_yellow_3.jpg,092_red_reverse.jpg,043_blue_3.jpg,105_im.jpg,103_green_reverse.jpg,044_blue_3.jpg,067_green_5.jpg,003_yellow_2.jpg,077_im.jpg
+bot3:107_im.jpg,070_green_7.jpg,078_im.jpg,090_red_skip.jpg,054_blue_8.jpg,051_blue_7.jpg
+bot4:093_blue_plus2.jpg,041_blue_2.jpg,108_im.jpg,007_yellow_4.jpg,075_green_9.jpg,028_red_5.jpg
+bot5:059_green_1.jpg,069_green_6.jpg,104_green_reverse.jpg,049_blue_6.jpg,060_green_2.jpg,096_blue_skip.jpg
+bot6:097_blue_reverse.jpg,062_green_3.jpg,016_yellow_8.jpg,076_green_0.jpg,084_yellow_skip.jpg,029_red_5.jpg
+mid:030_red_6.jpg,053_blue_8.jpg,091_red_reverse.jpg,050_blue_6.jpg,008_yellow_4.jpg,036_red_9.jpg,047_blue_5.jpg,100_green_plus2.jpg,089_red_skip.jpg,065_green_4.jpg,040_blue_1.jpg,052_blue_7.jpg,018_yellow_9.jpg,071_green_7.jpg,017_yellow_9.jpg,027_red_4.jpg,094_blue_plus2.jpg,032_red_7.jpg,079_im.jpg,014_yellow_7.jpg,101_green_skip.jpg,068_green_6.jpg,095_blue_skip.jpg,074_green_9.jpg,019_yellow_0.jpg,048_blue_5.jpg,038_red_0.jpg,073_green_8.jpg,056_blue_9.jpg,023_red_2.jpg,025_red_3.jpg,057_blue_0.jpg,042_blue_2.jpg,072_green_8.jpg,012_yellow_6.jpg,066_green_5.jpg,034_red_8.jpg,015_yellow_8.jpg,102_green_skip.jpg,099_green_plus2.jpg,026_red_4.jpg,022_red_2.jpg,009_yellow_5.jpg,031_red_6.jpg,033_red_7.jpg,024_red_3.jpg,082_yellow_plus2.jpg,085_yellow_reverse.jpg,098_blue_reverse.jpg,037_red_9.jpg,083_yellow_skip.jpg,055_blue_9.jpg,020_red_1.jpg,010_yellow_5.jpg,002_yellow_1.jpg,039_blue_1.jpg
+throwed:011_yellow_6.jpg,004_yellow_2.jpg,081_yellow_plus2.jpg,080_im.jpg,005_yellow_3.jpg,013_yellow_7.jpg,001_yellow_1.jpg

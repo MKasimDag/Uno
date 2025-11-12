@@ -1,0 +1,7 @@
+*****UserStatistic*****
+Num of games:4
+Num of wins:3
+Num of loses:1
+Total score:800
+*****Games*****
+game_1

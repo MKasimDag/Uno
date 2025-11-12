@@ -1,0 +1,26 @@
+*****BeginingOfGame*****
+Num of bots:3
+generated deck: 
+mid:
+bot1 hand:
+bot2 hand: 
+bot3 hand:
+Kasım hand: 
+*****Gameplay*****
+...
+*****EndOfGame*****(örnek 1)
+is finished:true
+generated deck:
+mid:
+bot1 hand:
+bot2 hand:
+bot3 hand:
+Kasım hand:
+*****EndOfGame*****(örnek 2)
+is finished:false
+generated deck:
+mid:
+bot1 hand:
+bot2 hand:
+bot3 hand:
+Kasım hand:

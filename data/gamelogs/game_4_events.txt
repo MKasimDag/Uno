@@ -1,0 +1,10 @@
+Doğukan plays images\card_images\004_yellow_2.jpg
+bot1 plays images\card_images\081_yellow_plus2.jpg
+bot1 plays +2 card
+bot2 draws a card from deck
+bot2 draws a card from deck
+bot2 draws 2 cards as a penalty
+bot3 plays images\card_images\080_im.jpg
+bot4 plays images\card_images\005_yellow_3.jpg
+bot5 plays images\card_images\013_yellow_7.jpg
+bot6 plays images\card_images\001_yellow_1.jpg

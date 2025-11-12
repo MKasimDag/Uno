@@ -1,0 +1,18 @@
+Furkan plays images\card_images\073_green_8.jpg
+bot1 plays images\card_images\103_green_reverse.jpg
+bot1 plays reverse card
+Furkan plays images\card_images\076_green_0.jpg
+bot1 plays images\card_images\065_green_4.jpg
+bot2 plays images\card_images\058_green_1.jpg
+bot3 plays images\card_images\069_green_6.jpg
+bot4 plays images\card_images\067_green_5.jpg
+Furkan plays images\card_images\061_green_2.jpg
+bot1 plays images\card_images\068_green_6.jpg
+bot2 plays images\card_images\011_yellow_6.jpg
+bot3 plays images\card_images\106_im.jpg
+bot3 plays wild +4 card
+bot4 draws a card from deck
+bot4 draws a card from deck
+bot4 draws a card from deck
+bot4 draws a card from deck
+bot4 draws 4 cards as a penalty

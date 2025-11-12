@@ -1,0 +1,7 @@
+Kasım plays images\card_images\046_blue_4.jpg
+bot1 plays images\card_images\043_blue_3.jpg
+bot2 plays images\card_images\095_blue_skip.jpg
+bot2 plays skip card
+bot1 plays images\card_images\089_red_skip.jpg
+bot1 plays skip card
+bot4 plays images\card_images\033_red_7.jpg
